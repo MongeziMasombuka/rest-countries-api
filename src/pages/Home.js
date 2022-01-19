@@ -4,9 +4,9 @@ import Countries from '../components/Countries'
 
 function Home() {
   return (
-    <main className='bg-verylightgray dark:bg-verydarkblue'>
+    <main className='min-h-screen bg-verylightgray dark:bg-verydarkblue '>
       <SearchForm/>
-      <Countries/>
+      <Countries className="text-sm"/>
     </main>
   )
 }
