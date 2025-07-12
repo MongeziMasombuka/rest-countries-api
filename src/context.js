@@ -1,15 +1,11 @@
-import React, {useState, useContext, useEffect, Children
-} from 'react'
-import {useCallback} from 'react'
+import React, { useState, useContext, useEffect, createContext } from 'react';
 
-let url ='https://restcountries.com/v2/all'
+const AppContext = createContext();
 
-const AppContext = React.createContext()
-
-const AppProvider = ({children})=>{
+const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [query,setQuery] = useState('')
-  const [countries, setCountries]=useState([])
+  const [query, setQuery] = useState('');
+  const [countries, setCountries] = useState([]);
 
   const fetchCountries = async () => {
     setLoading(true);
@@ -45,19 +41,14 @@ const AppProvider = ({children})=>{
   useEffect(() => {
     fetchCountries();
   }, [query]);
+
   return (
-    <AppContext.Provider
-    value={
-      {loading, countries, setQuery,}
-    }
-    >
+    <AppContext.Provider value={{ loading, countries, setQuery }}>
       {children}
     </AppContext.Provider>
-  )
-}
+  );
+};
 
-export const useGlobalContext= ()=>{
-  return useContext(AppContext)
-}
+export const useGlobalContext = () => useContext(AppContext);
 
-export {AppProvider, AppContext}
+export { AppProvider, AppContext };
