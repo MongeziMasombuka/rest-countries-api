@@ -91,21 +91,6 @@ npm test        # Run tests (if implemented)
 
 ---
 
-## 📁 Project Structure
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/          # Main page views (Home, Detail)
-├── assets/         # Static assets (flags, icons if needed)
-├── styles/         # Tailwind + global CSS
-├── context/        # Theme context provider
-├── App.js          # Routes and layout
-└── index.js        # App entry point
-```
-
----
-
 ## 📚 Learnings
 
 Through this challenge, I gained hands-on experience with:
@@ -118,14 +103,6 @@ Through this challenge, I gained hands-on experience with:
 
 ---
 
-## 👤 Author
-
-* Frontend Mentor – [@your-frontendmentor](https://www.frontendmentor.io/profile/your-frontendmentor)
-* GitHub – [@yourusername](https://github.com/yourusername)
-* Twitter – [@yourhandle](https://twitter.com/yourhandle)
-
----
-
 ## 🙌 Acknowledgments
 
 * [Frontend Mentor](https://www.frontendmentor.io/) for the challenge
@@ -134,4 +111,3 @@ Through this challenge, I gained hands-on experience with:
 
 ---
 
-Let me know if you want a downloadable version of this README or help deploying the app!
