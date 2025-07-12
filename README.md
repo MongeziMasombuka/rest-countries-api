@@ -6,7 +6,7 @@ Built with **React 17**, **React Router v6**, and **Tailwind CSS v3**.
 
 ## 🚀 Live Demo
 
-🔗 [Live Site](https://your-live-site-url.com](https://rest-countries-api-frontend-mentor.netlify.app/)
+🔗 [Live Site](https://rest-countries-api-frontend-mentor.netlify.app/)
 
 ---
 
