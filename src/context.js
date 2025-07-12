@@ -1,54 +1,51 @@
-import React, { useState, useContext, useEffect, createContext } from 'react';
+import React, {useState, useContext, useEffect, Children
+} from 'react'
+import {useCallback} from 'react'
 
-const AppContext = createContext();
+let url ='https://restcountries.com/v2/all'
 
-const AppProvider = ({ children }) => {
+const AppContext = React.createContext()
+
+const AppProvider = ({children})=>{
   const [loading, setLoading] = useState(true);
-  const [query, setQuery] = useState('');
-  const [countries, setCountries] = useState([]);
+  const [query,setQuery] = useState('')
+  const [countries, setCountries]=useState([])
 
-  const fetchCountries = async () => {
-    setLoading(true);
-
-    let url = 'https://restcountries.com/v2/all';
-
-    if (query && query !== 'all') {
-      const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
-      if (regions.includes(query)) {
-        url = `https://restcountries.com/v2/region/${query}`;
-      } else {
-        url = `https://restcountries.com/v2/name/${query}`;
-      }
+  if(query === 'all' || query === ''){
+    url = 'https://restcountries.com/v2/all'
+  }else if(query === 'Africa'||  query === 'Americas'|| query === 'Asia'|| query === 'Europe'|| query === 'Oceania'){
+    url =`https://restcountries.com/v2/region/${query}`
+  }else{  
+    url = `https://restcountries.com/v2/name/${query}`
     }
-
+    const fetchCountries = async () => {
+    setLoading(true)
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-
-      // Handle API error response (e.g. "Not Found")
-      if (data.status === 404) {
-        setCountries([]);
-      } else {
-        setCountries(data);
-      }
+      const response = await fetch(url)
+      const countries = await response.json()
+      setLoading(false)
+      setCountries(countries)  
     } catch (error) {
-      console.error('Failed to fetch countries:', error);
-    } finally {
-      setLoading(false);
+      setLoading(false)
+      console.log(error)
     }
-  };
-
+  }
   useEffect(() => {
-    fetchCountries();
-  }, [query]);
-
+    fetchCountries()
+  }, [query])
   return (
-    <AppContext.Provider value={{ loading, countries, setQuery }}>
+    <AppContext.Provider
+    value={
+      {loading, countries, setQuery,}
+    }
+    >
       {children}
     </AppContext.Provider>
-  );
-};
+  )
+}
 
-export const useGlobalContext = () => useContext(AppContext);
+export const useGlobalContext= ()=>{
+  return useContext(AppContext)
+}
 
-export { AppProvider, AppContext };
+export {AppProvider, AppContext}
