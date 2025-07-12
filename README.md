@@ -1,129 +1,137 @@
-🌍 REST Countries API with Color Theme Switcher
-A Frontend Mentor challenge solution to build a responsive, accessible, and theme-switchable UI that consumes the REST Countries V2 API. Built using React 17, React Router v6, and Tailwind CSS v3.
+# 🌍 REST Countries API with Color Theme Switcher
 
+A Frontend Mentor challenge solution: a responsive, accessible, and theme-switchable single-page application that fetches data from the **REST Countries V2 API**.
 
-🚀 Live Demo
-🔗 Live Site
+Built with **React 17**, **React Router v6**, and **Tailwind CSS v3**.
 
-📌 Table of Contents
-Overview
+## 🚀 Live Demo
 
-Features
+🔗 [Live Site]([https://your-live-site-url.com](https://rest-countries-api-frontend-mentor.netlify.app/))
 
-Built With
+---
 
-Getting Started
+## 📌 Table of Contents
 
-Project Structure
+* [Overview](#overview)
+* [Features](#features)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+* [Project Structure](#project-structure)
+* [Learnings](#learnings)
+* [Author](#author)
+* [Acknowledgments](#acknowledgments)
 
-Learnings
+---
 
-Author
+## 📖 Overview
 
-Acknowledgments
+This single-page application allows users to browse and explore countries' data from around the world using the REST Countries API.
 
-📖 Overview
-This single-page application allows users to browse and explore information about countries from around the world. Data is fetched from the REST Countries V2 API. Users can:
+**Users can:**
 
-View all countries
+* View all countries
+* Search countries by name
+* Filter by region
+* View detailed information about a selected country
+* Navigate to neighboring countries
+* Toggle between light and dark themes
 
-Search countries by name
+---
 
-Filter by region
+## ✅ Features
 
-View details of a selected country
+* 🌍 Fetch data from REST Countries API
+* 🔍 Real-time search functionality
+* 🌎 Filter countries by region
+* 🧭 Country detail page with nested border country navigation
+* 🌙 Light / Dark mode toggle using React Context
+* 📱 Fully responsive mobile-first layout
+* ⚡ Fast and lightweight SPA
 
-Navigate to border countries
+---
 
-Toggle between light and dark mode
+## 🛠 Built With
 
-✅ Features
-🌍 Fetch data from REST Countries API
+* **React 17**
+* **React Router DOM v6**
+* **Tailwind CSS v3**
+* **React Icons**
+* **Fetch API** for data requests
 
-🔍 Real-time search functionality
+---
 
-🌎 Filter countries by region
+## ⚙️ Getting Started
 
-🧭 Country detail page with nested border country navigation
+### Prerequisites
 
-🌙 Light / Dark theme toggle
+* Node.js ≥ 14
+* npm or yarn
 
-📱 Fully responsive mobile-first layout
+### Installation
 
-⚡ Fast and lightweight SPA
-
-🛠 Built With
-React 17
-
-React Router v6
-
-Tailwind CSS v3
-
-React Icons
-
-Fetch API for data requests
-
-📁 Project Structure
-bash
-Copy
-Edit
-src/
-├── components/         # Reusable UI components
-├── pages/              # Main page views (Home, Detail)
-├── assets/             # Static assets (flags, icons if needed)
-├── styles/             # Tailwind + global CSS
-├── App.js              # Routes and layout
-├── index.js            # App entry point
-└── context/            # Theme context provider
-⚙️ Getting Started
-Prerequisites
-Node.js ≥ 14
-
-npm or yarn
-
-Install & Run
-bash
-Copy
-Edit
-# Clone repo
+```bash
+# Clone the repository
 git clone https://github.com/yourusername/rest-countries-api.git
 cd rest-countries-api
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm start
-🧪 Scripts
-bash
-Copy
-Edit
+```
+
+### Scripts
+
+```bash
 npm start       # Start dev server
 npm run build   # Build for production
 npm test        # Run tests (if implemented)
-📚 Learnings
-Through this challenge, I gained experience with:
+```
 
-React Router DOM v6 and nested routing
+---
 
-Theme management using React Context
+## 📁 Project Structure
 
-Tailwind CSS utility-first workflow
+```
+src/
+├── components/     # Reusable UI components
+├── pages/          # Main page views (Home, Detail)
+├── assets/         # Static assets (flags, icons if needed)
+├── styles/         # Tailwind + global CSS
+├── context/        # Theme context provider
+├── App.js          # Routes and layout
+└── index.js        # App entry point
+```
 
-Dynamic UI updates using fetch
+---
 
-Improving UI accessibility and responsiveness
+## 📚 Learnings
 
-👤 Author
-Frontend Mentor – @your-frontendmentor
+Through this challenge, I gained hands-on experience with:
 
-GitHub – @yourusername
+* React Router DOM v6 and nested routing
+* Theme management with React Context API
+* Tailwind CSS utility-first design workflow
+* Fetch API for dynamic UI updates
+* Improving UI accessibility and responsiveness
 
-Twitter – @yourhandle
+---
 
-🙌 Acknowledgments
-Frontend Mentor for the awesome challenge
+## 👤 Author
 
-REST Countries API
+* Frontend Mentor – [@your-frontendmentor](https://www.frontendmentor.io/profile/your-frontendmentor)
+* GitHub – [@yourusername](https://github.com/yourusername)
+* Twitter – [@yourhandle](https://twitter.com/yourhandle)
 
-Tailwind CSS & React community for helpful docs and tools
+---
+
+## 🙌 Acknowledgments
+
+* [Frontend Mentor](https://www.frontendmentor.io/) for the challenge
+* [REST Countries API](https://restcountries.com/)
+* Tailwind CSS & React communities for documentation and tools
+
+---
+
+Let me know if you want a downloadable version of this README or help deploying the app!
