@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect, Children
 } from 'react'
 import {useCallback} from 'react'
 
-let url ='https://restcountries.com/v2/all?fields=name,capital,region,subregion,population'
+let url ='https://restcountries.com/v2/all?fields=name,capital,region,subregion,population,flag'
 
 const AppContext = React.createContext()
 
@@ -12,7 +12,7 @@ const AppProvider = ({children})=>{
   const [countries, setCountries]=useState([])
 
   if(query === 'all' || query === ''){
-    url = 'https://restcountries.com/v2/all?fields=name,capital,region,subregion,population'
+    url = 'https://restcountries.com/v2/all?fields=name,capital,region,subregion,population,flag'
   }else if(query === 'Africa'||  query === 'Americas'|| query === 'Asia'|| query === 'Europe'|| query === 'Oceania'){
     url =`https://restcountries.com/v2/region/${query}`
   }else{  
